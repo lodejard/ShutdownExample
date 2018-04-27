@@ -14,7 +14,12 @@ namespace WebAppShutdown
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Before Run");
             BuildWebHost(args).Run();
+            Console.WriteLine("After Run");
+
+            Console.WriteLine("Press [enter] to exit:");
+            Console.ReadLine();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
